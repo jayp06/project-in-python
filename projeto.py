@@ -94,19 +94,6 @@ def verificar_progresso():
     except FileNotFoundError:
         print("Dados insuficientes para calcular o progresso.")
 
-def atualizar_metas():
-    try:
-        metas = {}
-        metas["distancia_total"] = float(input("Digite a nova meta de distância total (em km): "))
-        metas["tempo_5km"] = input("Digite a nova meta de tempo para 5 km (HH:MM:SS): ")
-
-        with open("metas.txt", "w") as arquivo:
-            for chave, valor in metas.items():
-                arquivo.write(f"{chave},{valor}\n")
-
-        print("\nMetas atualizadas com sucesso!")
-    except ValueError:
-        print("Erro ao atualizar as metas.")
 
 def sugerir_treinos():
     try:
@@ -144,8 +131,7 @@ if __name__ == "__main__":
         print("4. Definir Metas")
         print("5. Visualizar Metas")
         print("6. Verificar Progresso")
-        print("7. Atualizar Metas")
-        print("8. Sugerir Treinos")
+        print("7. Sugerir Treinos")
         print("0. Sair")
         print("-------------------------------------")
 
@@ -165,8 +151,6 @@ if __name__ == "__main__":
         elif opcao == "6":
             verificar_progresso()
         elif opcao == "7":
-            atualizar_metas()
-        elif opcao == "8":
             sugerir_treinos()
         elif opcao == "0":
             break
