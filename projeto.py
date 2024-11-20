@@ -134,3 +134,19 @@ def sugerir_treinos():
         print(f"Condições Climáticas: {sugestao_condicoes}")
     except FileNotFoundError:
         print("Arquivo de treinos não encontrado. Adicione treinos antes de usar esta funcionalidade.")
+
+if __name__ == "__main__":
+    while True:
+        print("\n--- Menu de Gerenciamento de Treinos ---")
+        print("1. Adicionar Treino")
+        print("2. Visualizar Treinos")
+        print("3. Filtrar Treinos")
+        print("4. Definir Metas")
+        print("5. Visualizar Metas")
+        print("6. Verificar Progresso")
+        print("7. Atualizar Metas")
+        print("8. Sugerir Treinos")
+        print("0. Sair")
+        print("-------------------------------------")
+
+        opcao = input("Digite a opção desejada: ")
