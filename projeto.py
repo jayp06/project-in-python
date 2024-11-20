@@ -75,3 +75,21 @@ def visualizar_metas():
     except FileNotFoundError:
         print("Nenhuma meta definida ainda.")
 
+def verificar_progresso():
+    try:
+        with open("treinos.txt", "r") as arquivo_treinos, open("metas.txt", "r") as arquivo_metas:
+            treinos = arquivo_treinos.readlines()
+            metas = {meta.split(",")[0]: meta.split(",")[1].strip() for meta in arquivo_metas.readlines()}
+
+            distancia_total = sum(float(treino.split(",")[1]) for treino in treinos)
+            meta_distancia = float(metas.get("distancia_total", 0))
+
+            print("\n--- Progresso em Relação às Metas ---")
+            print(f"Meta de distância: {meta_distancia} km")
+            print(f"Distância percorrida: {distancia_total:.2f} km")
+            if distancia_total >= meta_distancia:
+                print("Parabéns! Você alcançou sua meta de distância.")
+            else:
+                print(f"Faltam {meta_distancia - distancia_total:.2f} km para atingir sua meta.")
+    except FileNotFoundError:
+        print("Dados insuficientes para calcular o progresso.")
