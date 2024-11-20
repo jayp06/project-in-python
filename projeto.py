@@ -123,7 +123,7 @@ def sugerir_treinos():
     except FileNotFoundError:
         print("Arquivo de treinos não encontrado. Adicione treinos antes de usar esta funcionalidade.")
         
-        def adicionar_recompensa(recompensa):
+def adicionar_recompensa(recompensa):
     with open("recompensas.txt", "a") as arquivo:
         arquivo.write(f"{recompensa}\n")
     print(f"Recompensa recebida: {recompensa}!")
