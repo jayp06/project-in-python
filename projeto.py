@@ -93,3 +93,17 @@ def verificar_progresso():
                 print(f"Faltam {meta_distancia - distancia_total:.2f} km para atingir sua meta.")
     except FileNotFoundError:
         print("Dados insuficientes para calcular o progresso.")
+
+def atualizar_metas():
+    try:
+        metas = {}
+        metas["distancia_total"] = float(input("Digite a nova meta de distância total (em km): "))
+        metas["tempo_5km"] = input("Digite a nova meta de tempo para 5 km (HH:MM:SS): ")
+
+        with open("metas.txt", "w") as arquivo:
+            for chave, valor in metas.items():
+                arquivo.write(f"{chave},{valor}\n")
+
+        print("\nMetas atualizadas com sucesso!")
+    except ValueError:
+        print("Erro ao atualizar as metas.")
