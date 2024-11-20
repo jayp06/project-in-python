@@ -174,7 +174,7 @@ if __name__ == "__main__":
             verificar_progresso()
         elif opcao == "7":
             sugerir_treinos()
-        elif opcao == 8:
+        elif opcao == "8":
             visualizar_recompensas()
         elif opcao == "0":
             break
