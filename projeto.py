@@ -150,3 +150,25 @@ if __name__ == "__main__":
         print("-------------------------------------")
 
         opcao = input("Digite a opção desejada: ")
+        
+
+        if opcao == "1":
+            adicionar_treino()
+        elif opcao == "2":
+            visualizar_treinos()
+        elif opcao == "3":
+            filtrar_treinos()
+        elif opcao == "4":
+            definir_metas()
+        elif opcao == "5":
+            visualizar_metas()
+        elif opcao == "6":
+            verificar_progresso()
+        elif opcao == "7":
+            atualizar_metas()
+        elif opcao == "8":
+            sugerir_treinos()
+        elif opcao == "0":
+            break
+        else:
+            print("Opção inválida.")
