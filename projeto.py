@@ -107,3 +107,30 @@ def atualizar_metas():
         print("\nMetas atualizadas com sucesso!")
     except ValueError:
         print("Erro ao atualizar as metas.")
+
+def sugerir_treinos():
+    try:
+        with open("treinos.txt", "r") as arquivo:
+            treinos = arquivo.readlines()
+        
+        if not treinos:
+            print("\nNenhum treino encontrado para basear sugestões.")
+            return
+        
+        indice_base = len(treinos) // 2
+        treino_base = treinos[indice_base].strip().split(",")
+        data, distancia, tempo, localizacao, condicoes_climaticas = treino_base
+
+        sugestao_distancia = float(distancia) + 0.5 
+        sugestao_tempo = tempo
+        sugestao_localizacao = localizacao
+        sugestao_condicoes = "Temperado"
+
+        print("\n--- Sugestão de Treino ---")
+        print(f"Data: Próximo treino")
+        print(f"Distância sugerida: {sugestao_distancia:.2f} km")
+        print(f"Tempo sugerido: {sugestao_tempo}")
+        print(f"Localização sugerida: {sugestao_localizacao}")
+        print(f"Condições Climáticas: {sugestao_condicoes}")
+    except FileNotFoundError:
+        print("Arquivo de treinos não encontrado. Adicione treinos antes de usar esta funcionalidade.")
