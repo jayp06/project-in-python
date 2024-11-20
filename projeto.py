@@ -48,4 +48,16 @@ def filtrar_treinos():
     else:
         print("Opção inválida.")
 
+def definir_metas():
+    metas = {}
+    print("\n--- Definir Metas ---")
+    metas["distancia_total"] = float(input("Digite a distância que deseja percorrer (em km): "))
+    metas["tempo_total"] = input("Digite o tempo que deseja para percorrer essa distância (HH:MM:SS): ")
+
+    with open("metas.txt", "w") as arquivo:
+        for chave, valor in metas.items():
+            arquivo.write(f"{chave},{valor}\n")
+
+    print("\nMetas definidas com sucesso!")
+
 
