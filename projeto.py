@@ -2,6 +2,21 @@ import os
 
 os.system("cls")
 
+import os
+from datetime import datetime
+
+os.system("cls")
+
+def adicionar_treino():
+    while True:
+        data = input("Digite a data do treino (AAAA-MM-DD): ")
+        try:
+            
+            datetime.strptime(data, "%Y-%m-%d")
+            break
+        except ValueError:
+            print("Formato de data inválido. Por favor, insira no formato AAAA-MM-DD.")
+
 def adicionar_treino():
     data = input("Digite a data do treino (AAAA-MM-DD): ")
     distancia = float(input("Digite a distância percorrida (em km): "))
