@@ -28,3 +28,24 @@ def visualizar_treinos():
                 print("Nenhum treino registrado.")
     except FileNotFoundError:
         print("Arquivo de treinos não encontrado.")
+
+def filtrar_treinos():
+    opcao = input("Digite (1) para filtrar por distância: ")
+
+    if opcao == "1":
+        distancia_minima = float(input("Digite a distância mínima (em km): "))
+        distancia_maxima = float(input("Digite a distância máxima (em km): "))
+
+        with open("treinos.txt", "r") as arquivo:
+            treinos = arquivo.readlines()
+
+            print("\n--- Treinos Filtrados ---")
+            for treino in treinos:
+                data, distancia, tempo, localizacao, condicoes_climaticas = treino.strip().split(",")
+                distancia = float(distancia)
+                if distancia_minima <= distancia <= distancia_maxima:
+                    print(f"Data: {data}, Distância: {distancia} km, Tempo: {tempo}, Localização: {localizacao}, Condições Climáticas: {condicoes_climaticas}")
+    else:
+        print("Opção inválida.")
+
+
