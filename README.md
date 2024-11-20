@@ -28,20 +28,9 @@ Sistema de recompensas: O programa registra as recompensas obtidas e permite vis
 Como adicionar recompensas:
 A cada vez que você alcançar uma nova meta ou completar um desafio, você poderá adicionar uma recompensa manualmente, editando o arquivo recompensas.txt ou implementando uma funcionalidade mais automatizada no futuro.
 
-Personalização:
-Você pode personalizar o programa adicionando novas funcionalidades, como:
 
-Tipos de treino: Adicionar campos para registrar o tipo de treino (corrida, ciclismo, etc.).
-Gráficos: Criar gráficos para visualizar o progresso ao longo do tempo.
-Integração com dispositivos: Integrar com dispositivos vestíveis para importar dados de treino automaticamente.
-Contribuições:
-Se você quiser contribuir para este projeto, fique à vontade para enviar pull requests.
 
-Licença:
-[Indique a licença utilizada, por exemplo, MIT]
 
-Agradecimentos:
-Agradeço a [seus colaboradores, se houver] pela ajuda no desenvolvimento deste projeto.
 
 Dicas:
 
