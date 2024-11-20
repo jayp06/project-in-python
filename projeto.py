@@ -152,7 +152,7 @@ if __name__ == "__main__":
         print("5. Visualizar Metas")
         print("6. Verificar Progresso")
         print("7. Sugerir Treinos")
-        print("8. visualizar recompensas")
+        print("8. Visualizar recompensas")
         print("0. Sair")
         print("-------------------------------------")
 
