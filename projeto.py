@@ -60,4 +60,18 @@ def definir_metas():
 
     print("\nMetas definidas com sucesso!")
 
+def visualizar_metas():
+    try:
+        with open("metas.txt", "r") as arquivo:
+            metas = arquivo.readlines()
+            print("\n--- Metas Atuais ---")
+            metas_dict = {meta.split(",")[0]: meta.split(",")[1].strip() for meta in metas}
+            
+            distancia = metas_dict.get("distancia_total", "Não definida")
+            tempo = metas_dict.get("tempo_total", "Não definido")
+            
+            print(f"Distância desejada: {distancia} km")
+            print(f"Tempo desejado para a distância: {tempo}")
+    except FileNotFoundError:
+        print("Nenhuma meta definida ainda.")
 
