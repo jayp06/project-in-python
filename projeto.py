@@ -80,6 +80,22 @@ def visualizar_metas():
     except FileNotFoundError:
         print("Nenhuma meta definida ainda.")
 
+def atribuir_medalha(distancia_total):
+    medalhas = [
+        (500, "Medalha: Esmeralda (500 km atingidos!)"),
+        (325, "Medalha: Diamante (325 km atingidos!)"),
+        (250, "Medalha: Platina (250 km atingidos!)"),
+        (150, "Medalha: Ouro (150 km atingidos!)"),
+        (100, "Medalha: Bronze (100 km atingidos!)"),
+        (50, "Medalha: Ferro (50 km atingidos!)"),
+        (25, "Medalha: Madeira (25 km atingidos!)"),
+    ]
+
+    for meta, medalha in medalhas:
+        if distancia_total >= meta:
+            return medalha
+    return None
+
 def verificar_progresso():
     try:
         with open("treinos.txt", "r") as arquivo_treinos, open("metas.txt", "r") as arquivo_metas:
