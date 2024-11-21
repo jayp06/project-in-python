@@ -198,6 +198,7 @@ if __name__ == "__main__":
         elif opcao == "8":
             visualizar_recompensas()
         elif opcao == "0":
+            print("Encerrando o programa")
             break
         else:
             print("Opção inválida.")
