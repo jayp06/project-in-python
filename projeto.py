@@ -170,7 +170,11 @@ def sugerir_treinos():
         print(f"Condições Climáticas: {sugestao_condicoes}")
     except FileNotFoundError:
         print("Arquivo de treinos não encontrado. Adicione treinos antes de usar esta funcionalidade.")
-        
+
+def verificar_ou_criar_arquivo(nome_arquivo):
+    if not os.path.exists(nome_arquivo):
+        with open(nome_arquivo, "w") as arquivo:
+            pass        
 
 if __name__ == "__main__":
     while True:
