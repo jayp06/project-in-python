@@ -97,6 +97,9 @@ def atribuir_medalha(distancia_total):
     return None
 
 def verificar_progresso():
+    verificar_ou_criar_arquivo("treinos.txt")
+    verificar_ou_criar_arquivo("metas.txt")
+    
     try:
         with open("treinos.txt", "r") as arquivo_treinos, open("metas.txt", "r") as arquivo_metas:
             treinos = arquivo_treinos.readlines()
@@ -108,8 +111,15 @@ def verificar_progresso():
             print("\n--- Progresso em Relação às Metas ---")
             print(f"Meta de distância: {meta_distancia} km")
             print(f"Distância percorrida: {distancia_total:.2f} km")
+
+            medalha = atribuir_medalha(distancia_total)
+
             if distancia_total >= meta_distancia:
-                print("Parabéns! Você alcançou sua meta de distância.")
+                print("Parabéns! Você alcançou sua meta de distância.")  
+                
+                if medalha:
+                    print(f"Você recebeu a {medalha}")
+                    adicionar_recompensa(medalha)
             else:
                 print(f"Faltam {meta_distancia - distancia_total:.2f} km para atingir sua meta.")
     except FileNotFoundError:
