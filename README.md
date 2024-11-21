@@ -2,6 +2,8 @@ Readme: Gerenciador de Treinos
 Descrição:
 Este programa em Python é um gerenciador de treinos personalizável, projetado para ajudar você a acompanhar seus progressos e alcançar seus objetivos de fitness. Ele permite adicionar novos treinos, visualizar o histórico, definir metas e receber sugestões de novos treinos. Além disso, o sistema inclui uma funcionalidade de recompensas para te motivar ainda mais.
 
+Link para o FluxoGrama: https://lucid.app/lucidchart/3c133150-1505-4d73-952d-e8eba9bf4825/edit?viewport_loc=108%2C396%2C4202%2C2106%2C0_0&invitationId=inv_294d644b-9aaf-466a-8686-af13a5ca4e1d
+
 Pré-requisitos:
 Python: Versão 3.6 ou superior.
 Nenhuma biblioteca externa adicional é necessária para este código básico.
