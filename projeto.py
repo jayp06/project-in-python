@@ -130,6 +130,20 @@ def adicionar_recompensa(recompensa):
         arquivo.write(f"{recompensa}\n")
     print(f"Recompensa recebida: {recompensa}!")
 
+def visualizar_recompensas():
+    verificar_ou_criar_arquivo("recompensas.txt")
+    try:
+        with open("recompensas.txt", "r") as arquivo:
+            recompensas = arquivo.readlines()
+            if recompensas:
+                print("\n--- Recompensas Obtidas (Medalhas) ---")
+                for recompensa in recompensas:
+                    print(f"- {recompensa.strip()}")
+            else:
+                print("\nVocê ainda não recebeu nenhuma recompensa.")
+    except FileNotFoundError:
+        print("\nVocê ainda não recebeu nenhuma recompensa.")
+
 def sugerir_treinos():
     try:
         with open("treinos.txt", "r") as arquivo:
