@@ -2,11 +2,6 @@ import os
 
 os.system("cls")
 
-import os
-from datetime import datetime
-
-
-
 def adicionar_treino():
     data = input("Digite a data do treino (AAAA-MM-DD): ")
     distancia = float(input("Digite a distância percorrida (em km): "))
