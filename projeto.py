@@ -5,7 +5,7 @@ os.system("cls")
 import os
 from datetime import datetime
 
-os.system("cls")
+
 
 def adicionar_treino():
     data = input("Digite a data do treino (AAAA-MM-DD): ")
