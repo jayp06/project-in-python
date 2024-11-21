@@ -124,8 +124,11 @@ def verificar_progresso():
                 print(f"Faltam {meta_distancia - distancia_total:.2f} km para atingir sua meta.")
     except FileNotFoundError:
         print("Dados insuficientes para calcular o progresso.")
-        
 
+def adicionar_recompensa(recompensa):
+    with open("recompensas.txt", "a") as arquivo:
+        arquivo.write(f"{recompensa}\n")
+    print(f"Recompensa recebida: {recompensa}!")
 
 def sugerir_treinos():
     try:
