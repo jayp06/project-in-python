@@ -29,7 +29,17 @@ Como adicionar recompensas:
 A cada vez que você alcançar uma nova meta ou completar um desafio, você poderá adicionar uma recompensa manualmente, editando o arquivo recompensas.txt ou implementando uma funcionalidade mais automatizada no futuro.
 
 
-
+Verificar Progresso
+Calcula a distância total percorrida e compara com a meta definida.
+Informa o progresso em relação à meta.
+Premia o usuário com uma medalha correspondente ao desempenho:
+25 km: Medalha de Madeira
+50 km: Medalha de Ferro
+100 km: Medalha de Bronze
+150 km: Medalha de Ouro
+250 km: Medalha de Platina
+325 km: Medalha de Diamante
+500 km: Medalha de Esmeralda
 
 
 Dicas:
@@ -37,3 +47,11 @@ Dicas:
 Para obter melhores resultados, mantenha seus dados de treino atualizados.
 Defina metas realistas e acompanhe seu progresso regularmente.
 Experimente diferentes tipos de treinos para evitar a monotonia.
+
+
+Como desinstalar:
+Exclua os arquivos criados:
+treinos.txt
+metas.txt
+recompensas.txt
+Remova o arquivo do programa (main.py) do seu computador.
